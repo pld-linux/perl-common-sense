@@ -10,7 +10,7 @@ Summary:	common::sense - save a tree AND a kitten, use common::sense!
 Summary(pl.UTF-8):	common::sense - dostarcza zdroworozsądkowe ustawienia domyślne
 Name:		perl-common-sense
 Version:	2.01
-Release:	1
+Release:	2
 License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -52,5 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%dir %{perl_vendorlib}/common
 %{perl_vendorlib}/common/sense.pm
 %{_mandir}/man3/common::sense.3pm*
