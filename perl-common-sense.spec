@@ -6,17 +6,19 @@
 %define	pdir	common
 %define	pnam	sense
 Summary:	common::sense - save a tree AND a kitten, use common::sense!
-Summary(pl.UTF-8):	common::sense - dostarcza zdroworozsądkowe ustawienia domyślne
+Summary(pl.UTF-8):	common::sense - zdroworozsądkowe ustawienia domyślne dla programów w Perlu
 Name:		perl-common-sense
-Version:	3.0
+Version:	3.4
 Release:	1
-License:	unknown
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	43e50e48f465f616b82837a09101a566
-URL:		http://search.cpan.org/dist/Devel-FindRef/
+Source0:	http://www.cpan.org/modules/by-authors/id/M/ML/MLEHMANN/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	b87ef7ea6f068afdf7a05b67e7600885
+URL:		http://search.cpan.org/dist/common-sense/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,9 +36,7 @@ programów perlowych.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make} \
-	CC="%{__cc}" \
-	OPTIMIZE="%{rpmcflags}"
+%{__make}
 
 %{?with_tests:%{__make} test}
 
@@ -51,6 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc Changes LICENSE README
 %dir %{perl_vendorlib}/common
 %{perl_vendorlib}/common/sense.pm
 %{_mandir}/man3/common::sense.3pm*
