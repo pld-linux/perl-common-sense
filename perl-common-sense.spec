@@ -9,7 +9,7 @@ Summary:	common::sense - save a tree AND a kitten, use common::sense!
 Summary(pl.UTF-8):	common::sense - zdroworozsądkowe ustawienia domyślne dla programów w Perlu
 Name:		perl-common-sense
 Version:	3.73
-Release:	4
+Release:	5
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
