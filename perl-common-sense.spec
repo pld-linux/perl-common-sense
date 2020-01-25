@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	common
 %define	pnam	sense
 Summary:	common::sense - save a tree AND a kitten, use common::sense!
