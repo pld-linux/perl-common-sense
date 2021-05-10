@@ -1,0 +1,11 @@
+--- common-sense-3.74/Makefile.PL~	2015-06-29 14:39:14.000000000 +0200
++++ common-sense-3.74/Makefile.PL	2021-05-10 23:55:08.929813917 +0200
+@@ -9,7 +9,7 @@
+     NAME        => "common::sense",
+     VERSION_FROM => "sense.pm.PL",
+     PM          => {
+-       "sense.pm"  => '$(INST_ARCHLIB)/common/sense.pm',
++       "sense.pm"  => '$(INST_LIB)/common/sense.pm',
+        "sense.pod" => '$(INST_LIB)/common/sense.pod',
+     },
+     clean       => { FILES => "sense.pm" },
