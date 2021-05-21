@@ -7,17 +7,18 @@
 Summary:	common::sense - save a tree AND a kitten, use common::sense!
 Summary(pl.UTF-8):	common::sense - zdroworozsądkowe ustawienia domyślne dla programów w Perlu
 Name:		perl-common-sense
-Version:	3.74
-Release:	8
+Version:	3.75
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/M/ML/MLEHMANN/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	35b273147200c4c95eef7816f83e572d
+# Source0-md5:	0929c6b03455ca988a9b4219aca15292
 Patch0:		install.patch
-URL:		http://search.cpan.org/dist/common-sense/
+URL:		https://metacpan.org/release/common-sense
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
